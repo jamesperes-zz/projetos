@@ -6,7 +6,7 @@ arq = input(str("digite o nome do arquivo: "))
 palavra_in = input(str("Digite a palavra a ser contada: "))
 
 
-# retirar a acentuacao
+# retirar a acentuacao // codigo de github.com/etandel //
 def remove_diacritic(s):
 	return (normalize('NFKD', s)
 			.encode('ascii', 'ignore')
