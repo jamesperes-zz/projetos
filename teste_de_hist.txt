@@ -1,0 +1,45 @@
+-----------------------------
+----Pesquisa de Palavras-----
+-----------------------------
+
+
+
+Livro lido: texto.txt
+Palavra procurada: rute
+Vezes encontrada: 9
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: rute
+Vezes encontrada: 9
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: rute
+Vezes encontrada: 9
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: james
+Vezes encontrada: 0
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: james
+Vezes encontrada: 0
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: james
+Vezes encontrada: 0
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: james
+Vezes encontrada: 0
+Pesquisado em: 26/9/2016
+
+Livro lido: texto.txt
+Palavra procurada: james
+Vezes encontrada: 0
+Pesquisado em: 26/9/2016
