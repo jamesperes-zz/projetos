@@ -4,4 +4,4 @@ git de projetos
 
 
 pesquisa.py
---> se a palavra estiver seguida de " , " ou " . " ele não reconhece.
+--> contando quantas vezes uma palavra se repete dentro de um TXT
