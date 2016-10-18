@@ -41,33 +41,5 @@ Pesquisado em: 26/9/2016
 
 Livro lido: texto.txt
 Palavra procurada: james
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-B
-A
-B
-B
-B
-B
-D
-B
-C
 Vezes encontrada: 0
 Pesquisado em: 26/9/2016
