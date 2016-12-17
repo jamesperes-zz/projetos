@@ -1,4 +1,4 @@
 
 class Imprime(object):
-    def teste(a):
+    def teste(self, a):
         return a
