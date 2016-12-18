@@ -1,3 +1,4 @@
+
 class Conta:
     def __init__(self, clientes, numero, saldo = 0):
         self.saldo= 0
@@ -14,8 +15,8 @@ class Conta:
         if self.saldo >= valor:
             self.saldo -= valor
             self.operacoes.append(["SAQUE", valor])
-        else
-            print("Valor não suficiente")
+        else:
+            print("Senhor %s Valor não suficiente, seu saldo é :%10.2f" %(self.clientes[0], self.saldo))
 
     def deposito(self, valor):
         self.saldo += valor
