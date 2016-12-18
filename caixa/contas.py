@@ -17,7 +17,6 @@ class Conta:
             self.saldo -= valor
             self.operacoes.append(["SAQUE", valor])
         else:
-            str_do_nome_do_cliente = ''
             print("Senhor %s Valor não suficiente, seu saldo é :%10.2f" %(self.cliente.nome, self.saldo))
 
     def deposito(self, valor):
