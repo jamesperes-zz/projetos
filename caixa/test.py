@@ -1,5 +1,6 @@
 import unittest
 from cliente import Imprime
+from contas import Conta
 
 class ImprimeTestCase(unittest.TestCase):
 
@@ -7,7 +8,10 @@ class ImprimeTestCase(unittest.TestCase):
         self.assertEqual(1, Imprime().teste(1))
 
 
+class ContaTestCase(unittest.TestCase):
 
+    def test_de_conx2(self):
+        self.assertEqual(2, Conta().deposito(2))
 
-#if __name__ == "__main__":
-#    unittest.main()
+if __name__ == "__main__":
+    unittest.main()
