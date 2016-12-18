@@ -1,11 +1,12 @@
 
 class Conta:
-    def __init__(self, clientes, numero, saldo = 0):
-        self.saldo= 0
-        self.clientes = clientes
+    def __init__(self, cliente, numero, saldo = 0):
+
+        self.cliente = cliente
         self.numero = numero
+        self.saldo = saldo
+
         self.operacoes = []
-        self.deposito(saldo)
 
 
     def resumo(self):
@@ -16,7 +17,8 @@ class Conta:
             self.saldo -= valor
             self.operacoes.append(["SAQUE", valor])
         else:
-            print("Senhor %s Valor não suficiente, seu saldo é :%10.2f" %(self.clientes[0], self.saldo))
+            str_do_nome_do_cliente = ''
+            print("Senhor %s Valor não suficiente, seu saldo é :%10.2f" %(self.cliente.nome, self.saldo))
 
     def deposito(self, valor):
         self.saldo += valor
