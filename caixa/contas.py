@@ -1,6 +1,7 @@
 
 class Conta:
-    def __init__(self, cliente, numero, saldo = 0):
+
+    def __init__(self, cliente, numero, saldo=0):
 
         self.cliente = cliente
         self.numero = numero
@@ -8,16 +9,16 @@ class Conta:
 
         self.operacoes = []
 
-
     def resumo(self):
-        print("CC numero: %s Saldo: %10.2f" %(self.numero,self.saldo))
+        print("CC numero: %s Saldo: %10.2f" % (self.numero, self.saldo))
 
     def saque(self, valor):
         if self.saldo >= valor:
             self.saldo -= valor
             self.operacoes.append(["SAQUE", valor])
         else:
-            print("Senhor %s Valor não suficiente, seu saldo é :%10.2f" %(self.cliente.nome, self.saldo))
+            print("Senhor %s Valor não suficiente, seu saldo é :%10.2f" %
+                  (self.cliente.nome, self.saldo))
 
     def deposito(self, valor):
         self.saldo += valor
@@ -27,4 +28,4 @@ class Conta:
         print("Extrato CC n %s\n" % self.numero)
         for o in self.operacoes:
             print("%10s %10.2f\n" % (o[0], o[1]))
-        print("\n   Saldo: %10.2f\n" %self.saldo)
+        print("\n   Saldo: %10.2f\n" % self.saldo)
