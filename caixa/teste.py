@@ -27,5 +27,7 @@ conta_jose.saque(200)
 conta_jose.extrato()
 
 
-teste = 1
-imprimir_cliente(teste)
+teste = []
+
+teste.imprimir_cliente(id=1)
+print (teste2)
