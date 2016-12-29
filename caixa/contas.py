@@ -29,3 +29,16 @@ class Conta:
         for o in self.operacoes:
             print("%10s %10.2f\n" % (o[0], o[1]))
         print("\n   Saldo: %10.2f\n" % self.saldo)
+
+
+class Ler(object):
+    def localizar_cliente(self, id):
+        r = self.db.cursor.execute(
+            'SELECT * FROM clientes WHERE id = ?', (id,))
+        return r.fetchone()
+
+    def imprimir_cliente(self, id):
+        if self.localizar_cliente(id) == None:
+            print('Não existe cliente com o id informado.')
+        else:
+            print(self.localizar_cliente(id))
