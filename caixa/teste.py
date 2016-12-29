@@ -1,5 +1,6 @@
 from cliente import Cliente
 from contas import Conta
+from ler_banco import Ler
 cliente_joao=Cliente("joao da silva", "777-1234")
 cliente_maria=Cliente("maria da silva", "555-4321")
 cliente_jose=Cliente("jose da silva", "123456")
@@ -21,3 +22,7 @@ conta_maria.extrato()
 
 conta_jose.saque(200)
 conta_jose.extrato()
+
+
+
+imprimir_cliente(1)
