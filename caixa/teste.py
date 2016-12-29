@@ -1,5 +1,8 @@
+
+
 from cliente import Cliente
 from contas import Conta, Ler
+
 
 cliente_joao=Cliente("joao da silva", "777-1234")
 cliente_maria=Cliente("maria da silva", "555-4321")

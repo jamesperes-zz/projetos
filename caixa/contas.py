@@ -1,3 +1,4 @@
+import sqlite3
 
 class Conta:
 
@@ -32,6 +33,8 @@ class Conta:
 
 
 class Ler(object):
+    conn = sqlite3.connect('clientes.db')
+    cursor = conn.cursor()
     def localizar_cliente(self, id):
         r = self.db.cursor.execute(
             'SELECT * FROM clientes WHERE id = ?', (id,))
