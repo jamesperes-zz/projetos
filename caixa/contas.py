@@ -1,5 +1,8 @@
 import sqlite3
 
+conn = sqlite3.connect('clientes.db')
+cursor = conn.cursor()
+
 class Conta:
 
     def __init__(self, cliente, numero, saldo=0):
@@ -32,9 +35,10 @@ class Conta:
         print("\n   Saldo: %10.2f\n" % self.saldo)
 
 
-class Ler(object):
-    conn = sqlite3.connect('clientes.db')
-    cursor = conn.cursor()
+class Ler:
+    def __init__(self, id):
+        self.id = id
+
     def localizar_cliente(self, id):
         r = self.db.cursor.execute(
             'SELECT * FROM clientes WHERE id = ?', (id,))
