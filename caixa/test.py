@@ -1,6 +1,6 @@
 import unittest
 from cliente import Imprime
-from contas import Conta
+from contas import Conta , Ler
 
 
 class ImprimeTestCase(unittest.TestCase):
@@ -15,6 +15,11 @@ class ContaTestCase(unittest.TestCase):
         conta = Conta(1, 1)
         conta.deposito(2)
         self.assertEqual(2, conta.saldo)
+
+class LerTestCase(unittest.TestCase):
+
+    def teste_cliente(self):
+        self.assertEqual('maria',localizar_cliente(2))
 
 
 if __name__ == "__main__":
