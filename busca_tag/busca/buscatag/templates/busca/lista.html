@@ -1,0 +1,21 @@
+{% extends 'busca/base.html' %}
+{% block content %}
+
+{% for tag in tags %}
+    <div class="tags">
+        <div class="end">
+            <p align="left">
+                <br>
+
+            {{PessoaTag.id_pessoa}}
+            {{PessoaTag.id_tag}}
+            {{PessoaTag.rating}}
+            {{PessoaTag.obs}}
+
+
+
+</p>
+</div>
+    </div>
+{% endfor %}
+{% endblock content %}
