@@ -13,6 +13,8 @@ class Conta:
 
         self.operacoes = []
 
+        self.id = id
+
     def resumo(self):
         print("CC numero: %s Saldo: %10.2f" % (self.numero, self.saldo))
 
@@ -35,9 +37,9 @@ class Conta:
         print("\n   Saldo: %10.2f\n" % self.saldo)
 
 
-class Ler:
-    def __init__(self, id):
-        self.id = id
+
+
+
 
     def localizar_cliente(self, id):
         r = self.db.cursor.execute(
@@ -46,6 +48,6 @@ class Ler:
 
     def imprimir_cliente(self, id):
         if self.localizar_cliente(id) == None:
-            print('Não existe cliente com o id informado.')
+            return print('Não existe cliente com o id informado.')
         else:
-            print(self.localizar_cliente(id))
+             return print(self.localizar_cliente(id))

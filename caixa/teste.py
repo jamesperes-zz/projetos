@@ -1,7 +1,7 @@
-c
+
 
 from cliente import Cliente
-from contas import Conta, Ler
+from contas import Conta
 
 
 cliente_joao=Cliente("joao da silva", "777-1234")
@@ -27,7 +27,7 @@ conta_jose.saque(200)
 conta_jose.extrato()
 
 
-teste = []
+teste = 1
 
-teste.imprimir_cliente(id=1)
-print (teste2)
+conta_jose.imprimir_cliente(id=1)
+print (teste)
