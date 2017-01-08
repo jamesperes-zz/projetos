@@ -17,11 +17,15 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url
 from django.contrib import admin
-from buscatag.views import tag_lista
+from buscatag.views import tags_ratings, tags_list, pessoa
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 
 
 urlpatterns = [
+    url(r'^$',RedirectView.as_view(url='/tags') ),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', tag_lista),
+    url(r'^tag/(?P<tag_id>[0-9]+)', tags_ratings),
+    url(r'^tags/', tags_list),
+    url(r'^pessoa/(?P<pessoa_id>[0-9]+)', pessoa),
 ]

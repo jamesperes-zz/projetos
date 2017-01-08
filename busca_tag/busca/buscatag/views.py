@@ -4,6 +4,21 @@ from django.template.loader import render_to_string
 
 from .models import PessoaTag, Pessoa, Tag
 
-def tag_lista(request):
-    tags_localizados = PessoaTag.objects.all()
-    return render(request, 'busca/lista.html', {'tags': tags_localizados})
+def tags_ratings(request, tag_id):
+
+    tags_localizados = PessoaTag.objects.filter(
+        tag__id=tag_id).order_by('-rating')
+    return render(request,
+                  'busca/tags_ratings.html',
+                  {'tags': tags_localizados})
+
+def tags_list(request):
+    tags = Tag.objects.all()
+    return render(request, 'busca/tags_list.html', {'tags': tags})
+
+def pessoa(request, pessoa_id):
+
+    pessoa = Pessoa.objects.get(id=pessoa_id)
+    pessoa_tags = PessoaTag.objects.filter(pessoa__id=pessoa_id).order_by('-rating')
+    return render(request, 'busca/pessoa.html', {'pessoa': pessoa,
+                                                 'pessoa_tags': pessoa_tags})

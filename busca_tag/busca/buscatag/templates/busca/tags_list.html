@@ -1,0 +1,18 @@
+{% extends 'busca/base.html' %}
+{% block content %}
+
+{% for tag in tags %}
+    <div class="tags">
+        <div class="end">
+            <p align="left">
+                <br><br>
+
+            <a href="/tag/{{ tag.id }}">{{ tag.nome }}</a>
+
+
+
+</p>
+</div>
+    </div>
+{% endfor %}
+{% endblock content %}

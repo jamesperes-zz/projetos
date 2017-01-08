@@ -5,12 +5,21 @@ class Pessoa(models.Model):
     mail = models.EmailField()
     projeto = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.nome
+
 
 class Tag(models.Model):
-    nometag = models.CharField(max_length=50)
+    nome = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.nome
 
 class PessoaTag (models.Model):
-    id_pessoa = models.ForeignKey(Pessoa)
-    id_tag = models.ForeignKey(Tag)
+    pessoa = models.ForeignKey(Pessoa)
+    tag = models.ForeignKey(Tag)
     rating = models.IntegerField()
     obs = models.CharField(max_length=200)
+
+    def __str__(self):
+        return '{}: {}'.format(self.pessoa.nome, self.tag.nome)

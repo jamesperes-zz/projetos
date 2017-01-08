@@ -1,0 +1,24 @@
+{% extends 'busca/base.html' %}
+{% block content %}
+
+{{pessoa.nome}}
+{{pessoa.mail}}
+{{pessoa.projeto}}
+
+
+{% for pessoa_tag in pessoa_tags %}
+    <div class="tags">
+        <div class="end">
+            <p align="left">
+                <br>
+
+            {{pessoa_tag.tag.nome}}
+            {{pessoa_tag.rating}}
+            {{pessoa_tag.obs}}
+
+
+</p>
+</div>
+    </div>
+{% endfor %}
+{% endblock content %}
