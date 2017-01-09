@@ -6,9 +6,10 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-     <title>Busca por Tags</title>
+     <title>Busca por Tags {% block title %} {% endblock %} </title>
         <style>
               body {
+                padding-top: 20px;
                 background-color: #ccc;
               }
               .container{
@@ -21,9 +22,26 @@
 
     </head>
     <body>
+
         <div class="container">
-            <h1>Busca por Tags</h1>
+    <h1>Busca por Tags {% block body %} {% endblock %}</h1><br>
+
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/tags/">
+                  <img alt="Home" src="...">
+                </a>
+                <a class="navbar-brand" href="/devs/">
+                  <img alt="Desenvolvedores" src="...">
+                </a>
+              </div>
+            </div>
+          </nav>
+
+
         </div>
+
 <div class="container">
     <div class="com-md-6 com-md-offset-3">
 

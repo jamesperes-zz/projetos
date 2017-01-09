@@ -1,4 +1,6 @@
 {% extends 'busca/base.html' %}
+{% block title %} -  Desenvolvedores {% endblock %}
+{% block body %} -  Desenvolvedores {% endblock %}
 {% block content %}
 
 
@@ -17,7 +19,7 @@
 {% for dev in devs %}
 
         <tr>
-          <td> {{ dev.nome }}</td>
+          <td> <a href="/pessoa/{{ dev.id }}">{{ dev.nome }}</a></td>
           <td> {{dev.projeto}}</td>
 
         </tr>
