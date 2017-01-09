@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 
 class Pessoa(models.Model):
     nome = models.CharField(max_length=50)
@@ -11,6 +12,7 @@ class Pessoa(models.Model):
 
 class Tag(models.Model):
     nome = models.CharField(max_length=50)
+    imagem = models.ImageField(upload_to='uploads/')
 
     def __str__(self):
         return self.nome

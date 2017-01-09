@@ -28,4 +28,4 @@ urlpatterns = [
     url(r'^tag/(?P<tag_id>[0-9]+)', tags_ratings),
     url(r'^tags/', tags_list),
     url(r'^pessoa/(?P<pessoa_id>[0-9]+)', pessoa),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

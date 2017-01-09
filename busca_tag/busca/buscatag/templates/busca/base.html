@@ -1,23 +1,40 @@
 {% load staticfiles %}
 <html>
     <head>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="{% static 'css/busca.css' %}">
-        <title>Busca por Tags</title>
 
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <title>Busca por Tags</title>
+        <style>
+              body {
+                background-color: #ccc;
+              }
+              .container{
+                background-color: #fff;
+              }
+              .row{
+                background-color: #fff;
+              }
+              .table-striped > tbody > tr{
+                background-color: #d1e0e0;
+              }
+        </style>
 
     </head>
     <body>
-        <div class="topo">
-            <h1><a>Busca por Tags</a></h1>
+        <div class="container">
+            <h1>Busca por Tags</h1>
         </div>
+<div class="container">
+    <div class="com-md-6 com-md-offset-3">
 
                     {% block content %}
 
                     {% endblock %}
+    </div>
 
 
+
+</div>
 
     </body>
 </html>

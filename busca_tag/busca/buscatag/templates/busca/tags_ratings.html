@@ -1,21 +1,35 @@
 {% extends 'busca/base.html' %}
 {% block content %}
 
-{% for tag in tags %}
+
     <div class="tags">
-        <div class="end">
-            <p align="left">
-                <br>
-<a href="/pessoa/{{ tag.pessoa.id }}">{{ tag.pessoa.nome }}</a>
-
-            {{tag.tag}}
-            {{tag.rating}}
-            {{tag.obs}}
-<br>
-
-
-</p>
+  <table class="table">
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Linguagem </th>
+    <th>Rating</th>
+    <th>Observação </th>
+  </tr>
+</thead>
 </div>
-    </div>
+
+</table>
+
+{% for tag in tags %}
+
+  <table class="table table-striped">
+
+    <tbody>
+        <tr>
+          <td>  <a href="/pessoa/{{ tag.pessoa.id }}">{{ tag.pessoa.nome }}</a></td>
+          <td> {{tag.tag}}</td>
+          <td>  {{tag.rating}}</td>
+          <td> {{tag.obs}}</td>
+        </tr>
+
+    </tbody>
+</table>
+
 {% endfor %}
 {% endblock content %}
