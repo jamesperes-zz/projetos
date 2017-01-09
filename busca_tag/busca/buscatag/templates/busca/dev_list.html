@@ -1,0 +1,29 @@
+{% extends 'busca/base.html' %}
+{% block content %}
+
+
+    <div class="tags">
+  <table class="table table-responsive">
+<thead>
+  <tr>
+    <th>Nome</th>
+    <th>Projeto</th>
+
+  </tr>
+</thead>
+</div>
+<tbody>
+
+{% for dev in devs %}
+
+        <tr>
+          <td> {{ dev.nome }}</td>
+          <td> {{dev.projeto}}</td>
+
+        </tr>
+
+{% endfor %}
+    </tbody>
+</div>
+</table>
+{% endblock content %}

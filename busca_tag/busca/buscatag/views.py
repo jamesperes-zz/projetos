@@ -22,3 +22,7 @@ def pessoa(request, pessoa_id):
     pessoa_tags = PessoaTag.objects.filter(pessoa__id=pessoa_id).order_by('-rating')
     return render(request, 'busca/pessoa.html', {'pessoa': pessoa,
                                                  'pessoa_tags': pessoa_tags})
+
+def dev_list(request):
+    dev = Pessoa.objects.all()
+    return render(request, 'busca/dev_list.html', {'devs': dev})
