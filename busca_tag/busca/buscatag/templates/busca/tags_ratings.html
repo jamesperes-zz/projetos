@@ -13,15 +13,10 @@
   </tr>
 </thead>
 </div>
-
-</table>
+<tbody>
 
 {% for tag in tags %}
-<div class="tags">
 
-  <table class="table table-responsive">
-
-    <tbody>
         <tr>
           <td>  <a href="/pessoa/{{ tag.pessoa.id }}">{{ tag.pessoa.nome }}</a></td>
           <td> {{tag.tag}}</td>
@@ -29,9 +24,8 @@
           <td> {{tag.obs}}</td>
         </tr>
 
-    </tbody>
-</table>
-
-</div>
 {% endfor %}
+    </tbody>
+</div>
+</table>
 {% endblock content %}
