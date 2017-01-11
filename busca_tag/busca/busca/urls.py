@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url
 from django.contrib import admin
-from buscatag.views import tags_ratings, tags_list, pessoa, dev_list
+from buscatag.views import tags_ratings, tags_list, pessoa, dev_list, pro_list
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
 
@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^tag/(?P<tag_id>[0-9]+)', tags_ratings),
     url(r'^tags/', tags_list),
     url(r'^devs/', dev_list),
+    url(r'^pro/', pro_list),
     url(r'^pessoa/(?P<pessoa_id>[0-9]+)', pessoa),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

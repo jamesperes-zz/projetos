@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import Pessoa, Tag, PessoaTag
-
-
+from .models import Pessoa, Tag, PessoaTag, Projetolist
 
 
 class TagAdmin(admin.ModelAdmin):
@@ -18,8 +16,17 @@ class PessoaTagInline(admin.TabularInline):
 class PessoaAdmin(admin.ModelAdmin):
     inlines = [PessoaTagInline]
 
+#class ProjetolistInLine(admin.TabularInline):
+#    model = Projetolist
+
+class ProjetolistAdmin(admin.ModelAdmin):
+    #inlines = [ProjetolistInLine]
+    pass
+
+
 
 
 admin.site.register(Pessoa, PessoaAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(PessoaTag, PessoaTagAdmin)
+admin.site.register(Projetolist,ProjetolistAdmin)

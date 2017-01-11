@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.template.loader import render_to_string
 
 
-from .models import PessoaTag, Pessoa, Tag
+from .models import PessoaTag, Pessoa, Tag, Projetolist
 
 def tags_ratings(request, tag_id):
 
@@ -26,3 +26,7 @@ def pessoa(request, pessoa_id):
 def dev_list(request):
     dev = Pessoa.objects.all()
     return render(request, 'busca/dev_list.html', {'devs': dev})
+
+def pro_list(request):
+    dev = Projetolist.objects.all()
+    return render (request, 'busca/pro_list.html', {'devs': dev})

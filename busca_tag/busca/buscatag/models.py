@@ -5,6 +5,8 @@ class Pessoa(models.Model):
     nome = models.CharField(max_length=50)
     mail = models.EmailField()
     projeto = models.CharField(max_length=50)
+    tel = models.IntegerField()
+    slack = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nome
@@ -25,3 +27,10 @@ class PessoaTag (models.Model):
 
     def __str__(self):
         return '{}: {}'.format(self.pessoa.nome, self.tag.nome)
+
+class Projetolist(models.Model):
+    nome = models.ForeignKey(Pessoa)
+    tag = models.ForeignKey(Tag)
+
+    def __str__(self):
+        return self.projeto.nome

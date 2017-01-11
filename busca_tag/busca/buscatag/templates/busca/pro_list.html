@@ -1,0 +1,31 @@
+{% extends 'busca/base.html' %}
+{% block title %} -  Projetos {% endblock %}
+{% block body %} -  Projetos {% endblock %}
+{% block content %}
+
+
+    <div class="tags">
+  <table class="table table-responsive">
+<thead>
+  <tr>
+    <th>Projeto</th>
+    <th>Tecnologias</th>
+
+  </tr>
+</thead>
+</div>
+<tbody>
+
+{% for dev in devs %}
+
+        <tr>
+          <td> {{ dev.nome.nome }}</td>
+          <td> {{dev.tag.nome}}</td>
+
+        </tr>
+
+{% endfor %}
+    </tbody>
+</div>
+</table>
+{% endblock content %}

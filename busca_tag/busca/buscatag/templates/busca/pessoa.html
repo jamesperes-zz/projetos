@@ -6,22 +6,36 @@
 <h4>Nome: {{pessoa.nome}}</h4> <br>
 <h4>Email: {{pessoa.mail}}</h4>
 <h4>Projeto: {{pessoa.projeto}}</h4>
+<h4>Telefone: {{pessoa.tel}}</h4>
+<h4>slack: {{pessoa.slack}}</h4>
 
 <br>
-conhecimentos:
-{% for pessoa_tag in pessoa_tags %}
-    <div class="tags">
-        <div class="end">
-            <p align="left">
-                <br>
-
-            Linguagem {{pessoa_tag.tag.nome}}
-            Nivel: {{pessoa_tag.rating}}
-
-
-
+<p>
+<h3>Conhecimentos:</h3>
 </p>
+    <div class="tags">
+  <table class="table table-responsive">
+<thead>
+  <tr>
+    <th>Linguagem </th>
+    <th>Nivel</th>
+    <th>Obs</th>
+
+  </tr>
+</thead>
 </div>
-    </div>
+<tbody>
+
+{% for pessoa_tag in pessoa_tags %}
+
+<tr>
+        <td>  {{pessoa_tag.tag.nome}}</td>
+        <td>  {{pessoa_tag.rating}}</td>
+        <td>  {{pessoa_tag.obs}}</td>
+</tr>
+
 {% endfor %}
+</tbody>
+</table>
+</div>
 {% endblock content %}
