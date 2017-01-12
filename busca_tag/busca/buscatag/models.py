@@ -29,8 +29,9 @@ class PessoaTag (models.Model):
         return '{}: {}'.format(self.pessoa.nome, self.tag.nome)
 
 class Projetolist(models.Model):
-    nome = models.ForeignKey(Pessoa)
-    tag = models.ForeignKey(Tag)
+    projeto = models.CharField(max_length=50)
+    devs = models.ManyToManyField(Pessoa)
+    tag = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.projeto.nome

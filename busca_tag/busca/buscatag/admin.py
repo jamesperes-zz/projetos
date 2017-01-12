@@ -16,13 +16,9 @@ class PessoaTagInline(admin.TabularInline):
 class PessoaAdmin(admin.ModelAdmin):
     inlines = [PessoaTagInline]
 
-#class ProjetolistInLine(admin.TabularInline):
-#    model = Projetolist
-#    extra = 1
 
 class ProjetolistAdmin(admin.ModelAdmin):
-#    inlines = [ProjetolistInLine]
-    pass
+    filter_horizontal = ('tag','devs')
 
 
 
