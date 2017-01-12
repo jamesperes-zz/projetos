@@ -1,6 +1,6 @@
 {% extends 'busca/base.html' %}
-{% block title %} -  Contato {% endblock %}
-{% block body %} -  Contato  {% endblock %}
+{% block title %} -  Contato {{pessoa.nome}}{% endblock %}
+{% block body %} -  Contato {{pessoa.nome}} {% endblock %}
 {% block content %}
 
 <h4>Nome: {{pessoa.nome}}</h4> <br>

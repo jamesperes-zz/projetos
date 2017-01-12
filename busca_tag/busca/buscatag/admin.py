@@ -18,11 +18,11 @@ class PessoaAdmin(admin.ModelAdmin):
 
 #class ProjetolistInLine(admin.TabularInline):
 #    model = Projetolist
+#    extra = 1
 
 class ProjetolistAdmin(admin.ModelAdmin):
-    #inlines = [ProjetolistInLine]
+#    inlines = [ProjetolistInLine]
     pass
-
 
 
 
