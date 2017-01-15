@@ -10,17 +10,20 @@
   <tr>
     <th>Projeto</th>
     <th>Tecnologias</th>
+    <th>Desenvolvedores</th>
 
   </tr>
 </thead>
 </div>
 <tbody>
 
-{% for dev in devs %}
+{% for projeto in projetos %}
 
         <tr>
-          <td> {{ dev.devs.nome }}</td>
-          <td> {{dev.tag.nome}}</td>
+          <td>{{projeto.projeto}}</td>
+          <td> {% for tag in tags %}{{ tag.nome }}<br>{% endfor %}</td>
+          <td> {% for dev in devs %}{{ dev.nome }}<br>{% endfor %}</td>
+
 
         </tr>
 
