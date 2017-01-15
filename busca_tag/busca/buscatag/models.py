@@ -34,4 +34,4 @@ class Projetolist(models.Model):
     tag = models.ManyToManyField(Tag)
 
     def __str__(self):
-        return self.projeto.nome
+        return self.projeto
