@@ -29,9 +29,7 @@ def dev_list(request):
 
 def pro_list(request):
     projetos = Projetolist.objects.all()
-    for projeto in projetos:
-        devs = projeto.devs.all()
-        tags = projeto.tag.all()
-    return render (request, 'busca/pro_list.html', {'projetos': projetos,
-                                                        'devs': devs,
-                                                        'tags': tags})
+    #for projeto in projetos:
+    #devs = projeto.devs.all()
+    #tags = projeto.tag.all()
+    return render (request, 'busca/pro_list.html', {'projetos': projetos})
