@@ -16,4 +16,4 @@ print (lista)
 with open('teste2.csv', 'w') as csvfile:
     spamwriter = csv.writer(csvfile)
     for item in lista:
-        spamwriter.writerow(item)
+        spamwriter.writerows([item])
