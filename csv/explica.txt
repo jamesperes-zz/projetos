@@ -1,0 +1,39 @@
+Fala pessoal!!
+recebi uma tarefa no meu estagio que é pegar um arquivo em CSV e dentro de uma coluna está uma URL,
+minha tarefa é tirar parte dessa URL ex.:
+
+Entrada:
+/james/vidoes/upload
+
+saída esperada:
+james/
+
+O que eu já tentei:
+a lib CSV do python pegando o arquivo e fazendo split
+eu consegui fazer o split e pegar só a primeira palavra.
+
+import csv
+
+with open('teste1.csv') as csvfile:
+       reader = csv.DictReader(csvfile)
+lista = []
+for row in reader:
+    teste = str(row['URL'])
+    test2 = teste.split('/')
+    print(test2[1])
+    lista.append(test2[1])
+
+e coloquei tudo em uma lista vazia
+logo abaixo eu coloco pra escrever em outro arquivo
+
+print (lista)
+with open('teste2.csv', 'w') as csvfile:
+    spamwriter = csv.writer(csvfile)
+    for item in lista:
+        spamwriter.writerow(item)
+
+sendo que ele me retorna um CSV com cada letra em uma coluna
+
+j	a	m	e	s
+
+Alguem poderia me dar um help??
