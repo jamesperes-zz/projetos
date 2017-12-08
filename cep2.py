@@ -1,6 +1,5 @@
 import urllib.request
 
-
 cep_busca   = input('Digite o CEP: ')
 url  = "http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep_busca + "&formato=query_string"
 
